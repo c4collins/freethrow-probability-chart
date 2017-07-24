@@ -104,10 +104,6 @@ class Chart extends Component {
     const probability_of_basket = ft_value**x;
     const probability_of_non_basket = (1-ft_value)**(n-x);
 
-    console.log(ft_value);
-    console.log(combination);
-    console.log(probability_of_basket);
-    console.log(probability_of_non_basket);
     return combination * probability_of_basket * probability_of_non_basket;
   }
 
@@ -135,11 +131,11 @@ class Chart extends Component {
           this.probability_of_x_in_n(
             x, n, ft_value/100, num_of_attempts
           ), 
-          4
+          4 // Decimal places in result
         )
       });
     }
-    console.log(chartData);
+    // console.log(chartData);
     
     const width = 700;
     const height = 300;
